@@ -1,0 +1,9 @@
+plugins {
+    id 'java'
+}
+
+apply from: 'https://cdn.rocketplugins.space/rocketplaceholders'
+
+group = 'me.lorenzo0111'
+version = '1.0'
+
