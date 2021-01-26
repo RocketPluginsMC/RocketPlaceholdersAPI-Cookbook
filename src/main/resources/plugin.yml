@@ -3,6 +3,8 @@ version: 1.0
 main: me.lorenzo0111.rpcookbook.RpCookbook
 api-version: 1.15
 authors: [ Lorenzo0111 ]
+softdepend:
+  - RocketPlaceholders
 commands:
   rpcreate:
     description: Command to create a placeholder
