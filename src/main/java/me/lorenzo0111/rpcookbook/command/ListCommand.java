@@ -6,6 +6,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.jetbrains.annotations.NotNull;
 
 public class ListCommand implements CommandExecutor {
     private final RocketPlaceholdersAPI api;
@@ -15,11 +16,11 @@ public class ListCommand implements CommandExecutor {
     }
 
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    public boolean onCommand(CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
 
-        sender.sendMessage(ChatColor.GREEN + "Internal: " + ChatColor.GRAY + this.api.getInternalPlaceholders().getStorageManager().getInternalPlaceholders().getHashMap());
+        sender.sendMessage(ChatColor.GREEN + "Internal: " + ChatColor.GRAY + this.api.getPlaceholdersManager().getStorageManager().getInternalPlaceholders().getMap());
 
-        sender.sendMessage(ChatColor.GREEN + "External: " + ChatColor.GRAY + this.api.getInternalPlaceholders().getStorageManager().getExternalPlaceholders().getHashMap());
+        sender.sendMessage(ChatColor.GREEN + "External: " + ChatColor.GRAY + this.api.getPlaceholdersManager().getStorageManager().getExternalPlaceholders().getMap());
 
         return true;
     }

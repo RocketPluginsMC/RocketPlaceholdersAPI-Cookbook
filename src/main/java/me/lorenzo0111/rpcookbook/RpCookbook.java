@@ -9,6 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Locale;
+import java.util.Objects;
 
 public final class RpCookbook extends JavaPlugin {
 
@@ -37,9 +38,7 @@ public final class RpCookbook extends JavaPlugin {
     public PluginCommand getCommand(String name) {
         PluginCommand command = this.getServer().getPluginCommand(name.toLowerCase(Locale.ROOT));
 
-        if (command == null) {
-            throw new NullPointerException();
-        }
+        Objects.requireNonNull(command);
 
         return command;
     }

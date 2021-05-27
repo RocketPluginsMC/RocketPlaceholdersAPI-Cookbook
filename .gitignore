@@ -1,3 +1,8 @@
+# Minecraft.gitignore
+# You can download it here: git.io/McIgnore
+# Version: 1.1
+# Running a custom fork
+
 # User-specific stuff
 .idea/
 
@@ -7,11 +12,6 @@
 
 # IntelliJ
 out/
-# mpeltonen/sbt-idea plugin
-.idea_modules/
-
-# JIRA plugin
-atlassian-ide-plugin.xml
 
 # Compiled class file
 *.class
@@ -100,25 +100,32 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Gradle
-.gradle
+# Maven and gradle
+target/
+
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+
+javadocs/
 build/
+.gradle/
 
-gradlew
-gradlew.bat
-libs/
-gradle/
+!gradle/wrapper/gradle-wrapper.jar
 
-# Ignore Gradle GUI config
-gradle-app.setting
+# Testing server
+server/
 
-# Cache of project
-.gradletasknamecache
-
-**/build/
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+.flattened-pom.xml
 
 # Common working directory
 run/
 
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
+gradle.properties
+ignore/
