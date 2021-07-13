@@ -27,7 +27,7 @@ repositories {
 dependencies {
     compileOnly 'me.Lorenzo0111:RocketPlaceholders:1.9.1'
     compileOnly 'org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT'
-    compileOnly 'me.clip:placeholderapi:2.10.9'
+    compileOnly 'me.clip:placeholderapi:2.10.10'
 }
 
 java.sourceCompatibility = JavaVersion.VERSION_1_8
